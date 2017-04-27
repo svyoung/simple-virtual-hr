@@ -1,0 +1,21 @@
+{
+  "name": "vhr",
+  "version": "1.0.0",
+  "description": "virtual hr",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SVY",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "jquery": "^3.2.1",
+    "mysql": "*",
+    "path": "*",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

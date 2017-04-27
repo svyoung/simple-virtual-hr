@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/*ol, ul {
+	list-style: none;
+}*/
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*************** MEDIA QUERIES *********************/
+
+@media only screen and (max-width: 1025px) {
+    .container {
+    	width: 100% !important;
+    }
+}
+
+/****************************************************/
+html, body {
+	 height: 100%;
+	 background-color: #e7e7e7 !important;
+}
+
+.header-div {
+	font-family: "Abel", sans-serif;
+	letter-spacing: 3px;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	background-color: #393d3f;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	position: fixed;
+	top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000000;
+}
+
+.container-index {
+	position: relative;
+	height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.employee_search {
+	position: absolute;
+	float: left;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.employee_search input {
+	padding: 15px;
+	width: 60vh;
+	font-size: 1.2em;
+	font-family: 'Abel', sans-serif;
+	position: relative;
+	border: 1px solid #929191;
+}
+
+.employee_search input:focus {
+	outline: none;
+	background-color: #e1e1e1;
+}
+
+#result_list {
+	position: fixed;
+	top: 57px;
+	left: 0;
+}
+
+.emp_list_cell {
+	background-color: #f4f4f4;
+	padding: 15px;
+	text-align: left;
+	border-right: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	border-left: 1px solid #e1e1e1;
+	cursor: pointer;
+	width: 60vh;
+}
+
+.emp_list_cell:hover {
+	background-color: #393d3f;
+	color: #fff;
+}
+
+#activate_profile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.5);
+	z-index: 10000000;
+}
+
+#activate_profile .emp_profile_wrapper {
+	position: absolute;
+	float: left;
+	top: 50%;
+	left: 50%;
+	width: 899px;
+	height: 500px;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	-webkit-box-shadow: -1px 5px 26px 1px rgba(0,0,0,0.23);
+    -moz-box-shadow: -1px 5px 26px 1px rgba(0,0,0,0.23);
+    box-shadow: -1px 5px 26px 1px rgba(0,0,0,0.23);
+    overflow: hidden;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_header {
+	padding: 15px;
+    background: #fbfbfb;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.4em;
+    color: #616161;
+    overflow: hidden;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_header .emp_profile_header_title {
+	float: left;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_header .close_profile {
+	float: right;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_content {
+	height: 100%;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_content .emp_profile_left_content {
+	padding: 15px;
+	float: left;
+	width: 35%;
+	height: 100%;
+	border-right: 1px solid #efefef;
+	text-align: center;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_content .emp_profile_right_content {
+	padding: 15px;
+	float: left;
+	width: 65%;
+    height: 100%;
+    line-height: 1.5em;
+}
+
+#activate_profile .emp_profile_wrapper .emp_profile_content .emp_profile_left_content .profile_pic{
+	width: 85%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.employee-add {
+	cursor: pointer;
+	padding: 3px 14px;
+	border-radius: 2px;
+	background: #f1f1f1;
+	border-color: #000;
+}
+
+#employee-info {
+	background-color: #fff;
+}
+
+.box-header {
+	background-color: #C6D8D3;
+	color: #fff;
+	font-family: 'Abel', sans-serif;
+	font-size: 1.1em;
+	padding: 15px 20px;
+}
+
+.box-header:nth-child(even) {
+	background-color: #F0544F;
+}
+
+.box-content {
+	padding: 10px 20px;
+	color: #000;
+}
+
+#site-art{
+}
+
+#site-content {
+	font-family: 'Abel', sans-serif;
+}
+
+#site-content h1 {	
+}
+
+#site-content h3 {
+}
+
+.employee-list {
+	list-style: none;
+	margin-top: 20px;
+	line-height: 1.5em;
+	font-size: 1.2em;
+}
+
+.employee-cell {
+	display: inline-block;
+	padding: 20px;
+	width: 10%;
+}
+
+.employee-list a {
+	cursor: pointer;
+	padding: 10px;
+	color: #dd425f;
+}
+
+.employee-list a.employee-click-active {
+	display: block;
+	background-color: #006482;
+	color: #d5bbbb;
+}
+
+
+#employee-profile-active-display {
+	height: 100%;
+    display: block;
+    background-color: #fff;
+}
+
+
+.emp_profile_main {
+	padding: 12px;
+}
+
+/***** bootstrap override *****/ 
+
+.col-md-6.bs-right-override {
+	padding-right: 0px !important;
+}
+
+.col-md-6.bs-left-override {
+	padding-left: 0px !important;
+}
