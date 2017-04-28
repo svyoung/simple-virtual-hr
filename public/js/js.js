@@ -2,6 +2,24 @@ $(document).ready(function(){
 	SearchBox.loadSearchbox();
 });
 
+$(document).mouseup(function (e)
+{
+    var container = $(".emp_profile_wrapper");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        closeModal();
+    }
+});
+
+function closeModal() {
+	$("#activate_profile").fadeOut(400, function(){
+		$(this).remove();
+	});
+}
+
+
 var PopUp = (function(){
 	return {
 		expandProfile: function(emp_id) {
@@ -24,9 +42,7 @@ var PopUp = (function(){
 					}.bind(this));
 				},
 				closeProfile: function(employee_id) {
-					$("#activate_profile").fadeOut(400, function(){
-						$(this).remove();
-					});
+					closeModal();
 				},
 				render: function() {
 					return (
@@ -42,7 +58,11 @@ var PopUp = (function(){
 									{this.state.employee.title}
 								</div>
 								<div className="emp_profile_right_content">
-									{this.state.employee.department}
+									<div className="row">
+
+
+									</div>
+									Full Name: {this.state.employee.first_name} {this.state.employee.last_name}
 								</div>
 							</div>
 						</div>
